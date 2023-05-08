@@ -14,6 +14,13 @@
 		C30168782A08CA2A005FC723 /* RecipeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30168772A08CA2A005FC723 /* RecipeAppTests.swift */; };
 		C30168822A08CA2A005FC723 /* RecipeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30168812A08CA2A005FC723 /* RecipeAppUITests.swift */; };
 		C30168842A08CA2A005FC723 /* RecipeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30168832A08CA2A005FC723 /* RecipeAppUITestsLaunchTests.swift */; };
+		C30168922A08CB1C005FC723 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C30168912A08CB1C005FC723 /* Alamofire */; };
+		C30168952A08CB2D005FC723 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = C30168942A08CB2D005FC723 /* Nuke */; };
+		C30168972A08CB2D005FC723 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = C30168962A08CB2D005FC723 /* NukeExtensions */; };
+		C30168992A08CB2D005FC723 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = C30168982A08CB2D005FC723 /* NukeUI */; };
+		C301689B2A08CB2D005FC723 /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = C301689A2A08CB2D005FC723 /* NukeVideo */; };
+		C301689E2A08CB4A005FC723 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C301689D2A08CB4A005FC723 /* Realm */; };
+		C30168A02A08CB4A005FC723 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C301689F2A08CB4A005FC723 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C301689E2A08CB4A005FC723 /* Realm in Frameworks */,
+				C30168922A08CB1C005FC723 /* Alamofire in Frameworks */,
+				C30168A02A08CB4A005FC723 /* RealmSwift in Frameworks */,
+				C30168952A08CB2D005FC723 /* Nuke in Frameworks */,
+				C301689B2A08CB2D005FC723 /* NukeVideo in Frameworks */,
+				C30168972A08CB2D005FC723 /* NukeExtensions in Frameworks */,
+				C30168992A08CB2D005FC723 /* NukeUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +157,15 @@
 			dependencies = (
 			);
 			name = RecipeApp;
+			packageProductDependencies = (
+				C30168912A08CB1C005FC723 /* Alamofire */,
+				C30168942A08CB2D005FC723 /* Nuke */,
+				C30168962A08CB2D005FC723 /* NukeExtensions */,
+				C30168982A08CB2D005FC723 /* NukeUI */,
+				C301689A2A08CB2D005FC723 /* NukeVideo */,
+				C301689D2A08CB4A005FC723 /* Realm */,
+				C301689F2A08CB4A005FC723 /* RealmSwift */,
+			);
 			productName = RecipeApp;
 			productReference = C30168632A08CA28005FC723 /* RecipeApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +238,11 @@
 				Base,
 			);
 			mainGroup = C301685A2A08CA28005FC723;
+			packageReferences = (
+				C30168902A08CB1C005FC723 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C30168932A08CB2D005FC723 /* XCRemoteSwiftPackageReference "Nuke" */,
+				C301689C2A08CB4A005FC723 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = C30168642A08CA28005FC723 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -583,6 +611,71 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C30168902A08CB1C005FC723 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		C30168932A08CB2D005FC723 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
+		C301689C2A08CB4A005FC723 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C30168912A08CB1C005FC723 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C30168902A08CB1C005FC723 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		C30168942A08CB2D005FC723 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C30168932A08CB2D005FC723 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		C30168962A08CB2D005FC723 /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C30168932A08CB2D005FC723 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
+		};
+		C30168982A08CB2D005FC723 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C30168932A08CB2D005FC723 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+		C301689A2A08CB2D005FC723 /* NukeVideo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C30168932A08CB2D005FC723 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeVideo;
+		};
+		C301689D2A08CB4A005FC723 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C301689C2A08CB4A005FC723 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		C301689F2A08CB4A005FC723 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C301689C2A08CB4A005FC723 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C301685B2A08CA28005FC723 /* Project object */;
 }
